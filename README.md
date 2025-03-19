@@ -87,11 +87,11 @@ php bin/phpunit
 # Run the project with Docker
 
 Modifier la connection string dans le fichier .env
-DATABASE_URL="mysql://root:root@friendeventbackend-database-1/friendevent?serverVersion=8.0.32&charset=utf8mb4"
+DATABASE_URL="mysql://root:root@friendevent_backend-database-1/friendevent?serverVersion=8.0.32&charset=utf8mb4"
 
 ```
 docker-compose up
-sudo docker exec -it friendeventbackend-backend-1 bash
+sudo docker exec -it friendevent_backend-backend-1 bash
 cd project
 php bin/console doctrine:migrations:migrate
 ```
@@ -99,8 +99,8 @@ php bin/console doctrine:migrations:migrate
 # Remove the container, image and volumes
 ```
 sudo docker-compose down
-sudo docker image rm friendeventbackend-backend
-sudo docker volume rm friendeventbackend_mysql_data
+sudo docker image rm friendevent_backend-backend
+sudo docker volume rm friendevent_backend_mysql_data
 ```
 
 ## Contributing
